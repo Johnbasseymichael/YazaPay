@@ -1,0 +1,127 @@
+.hero {
+    background: url('../../../assets/bg-1.jpg') no-repeat center/cover;
+    height: 140vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+
+    .hero-img {
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .hero-text {
+        width: 50%;
+
+        h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            width: fit-content;
+            font-size: 1rem;
+            background: var(--soft-primary-color);
+            color: var(--primary-color);
+            padding: .4rem .8rem;
+            border-radius: .3rem;
+
+            svg {
+                font-size: 1.5rem;
+            }
+        }
+
+        h1 {
+            margin: 1.5rem 0;
+            font-size: 2.4rem;
+            width: 80%;
+        }
+
+        p {
+            width: 95%;
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+
+            button {
+                width: 12rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .8rem 1.5rem;
+                gap: .6rem;
+                background: var(--soft-bg-color);
+                border-radius: .7rem;
+                transition: .5s;
+
+                &:hover {
+                    background: var(--primary-color);
+                    color: var(--light-text-color);
+                }
+
+                p {
+                    margin-bottom: .8rem;
+                    text-align: left;
+                }
+
+                span {
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-text {
+        h4 {
+            font-size: .9rem !important;
+        }
+
+        h1 {
+            font-size: 1.7rem !important;
+        }
+
+        button {
+            width: 10rem !important;
+            padding: .5rem !important;
+
+            p {
+                margin-bottom: .3rem !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .hero {
+        flex-direction: column-reverse;
+        padding: 1rem;
+
+        .hero-img {
+            width: 80%;
+            margin-top: -5rem;
+        }
+
+        .hero-text {
+            width: 100%;
+
+        }
+
+        .btns {
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+    }
+}

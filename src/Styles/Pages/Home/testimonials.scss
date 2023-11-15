@@ -1,0 +1,56 @@
+.testimonials {
+    padding: 1rem;
+    margin: 3rem 0;
+
+    h2 {
+        text-align: center;
+    }
+
+    small {
+        display: block;
+        text-align: center;
+        max-width: 35rem;
+        margin: 0 auto;
+    }
+
+    .testimonies {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 3rem 0;
+
+        .testimony {
+            box-shadow: var(--shadow);
+            background: var(--bg-color);
+            padding: 2rem 1rem;
+            width: 22rem;
+            border-radius: 1rem;
+
+            .profile {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+
+                img {
+                    aspect-ratio: 1/1;
+                    width: 4rem;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                }
+            }
+
+            p {
+                font-size: .9rem;
+                margin: .5rem 0;
+            }
+
+            .rate {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+                color: rgb(204, 148, 5);
+            }
+        }
+    }
+}

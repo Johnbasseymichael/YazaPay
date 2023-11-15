@@ -1,0 +1,18 @@
+.head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background: var(--soft-primary-color);
+    width: fit-content;
+    margin: .6rem 0;
+    font-weight: 600;
+    padding: .3rem 1rem;
+    border-radius: .4rem;
+    color: var(--primary-color);
+    margin: 1rem auto;
+
+    svg {
+        font-size: 1.5rem;
+    }
+}

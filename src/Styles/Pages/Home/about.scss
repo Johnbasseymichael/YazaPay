@@ -1,0 +1,149 @@
+.about {
+    .work {
+        margin: 1rem 0 3rem 0;
+
+        .head {
+            margin: 1rem auto;
+        }
+
+        h2 {
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        small {
+            display: block;
+            text-align: center;
+        }
+
+        .steps {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+            gap: 1.5rem;
+            padding: 1rem;
+
+            .step {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .icon {
+                    background: var(--bg-color);
+                    box-shadow: var(--shadow);
+                    border-radius: 1.5rem;
+                    aspect-ratio: 1/1;
+                    width: 6rem;
+                    display: grid;
+                    place-content: center;
+
+                    svg {
+                        font-size: 4rem;
+                        border-radius: 50%;
+                        background: var(--soft-primary-color);
+                        color: var(--primary-color);
+                        padding: .8rem;
+                    }
+                }
+
+                span {
+                    margin-top: 1rem;
+                    font-size: .9rem;
+                }
+
+                p {
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+
+    .about-company {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 84%;
+        margin: 5rem auto;
+
+        img {
+            width: 50%;
+            border-radius: 1rem;
+            aspect-ratio: 1/1.1;
+            object-fit: cover;
+            margin-top: .5rem;
+        }
+
+        &>div {
+            width: 50%;
+
+            h2 {
+                margin: 1rem 0;
+            }
+
+            p {
+                font-size: .9rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            .jobs {
+                width: 90%;
+
+                .job {
+                    display: flex;
+                    align-items: start;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+
+                    svg {
+                        font-size: 4rem;
+                        border: .1rem solid var(--primary-color);
+                        width: 6rem;
+                        aspect-ratio: 1/1;
+                        border-radius: .7rem;
+                        padding: .5rem;
+                        color: var(--primary-color);
+                    }
+
+                    h3 {
+                        margin-bottom: .2rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .about-company {
+        flex-direction: column-reverse;
+        width: 100% !important;
+        padding: 0 1rem;
+
+        img {
+            width: 100% !important;
+            aspect-ratio: 1/1 !important;
+        }
+
+        &>div {
+            width: 100% !important;
+            text-align: center;
+
+            .head {
+                margin: 0 auto;
+            }
+
+            .jobs {
+                text-align: left;
+            }
+        }
+    }
+
+}
