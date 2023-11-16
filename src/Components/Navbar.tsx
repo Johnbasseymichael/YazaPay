@@ -19,11 +19,11 @@ function Navbar() {
 
                 <div className="middle-col">
                     <nav>
-                        <Link to={'#'} className={location.pathname === '/' ? 'active' : ''} >home</Link>
-                        <Link to={'#'} className={location.pathname === '/' ? 'active' : ''}>about</Link>
+                        <Link to={'/'} className={location.pathname === '/' ? 'active' : ''} >home</Link>
+                        <Link to={'/about'} className={location.pathname === '/about' ? 'active' : ''}>about</Link>
                         <Link to={'#'} className={location.pathname === '/' ? 'active' : ''}>services</Link>
-                        <Link to={'#'} className={location.pathname === '/' ? 'active' : ''}>FAQ</Link>
-                        <Link to={'#'} className={location.pathname === '/' ? 'active' : ''}>contact</Link>
+                        <Link to={'/faq'} className={location.pathname === '/faq' ? 'active' : ''}>FAQ</Link>
+                        <Link to={'/contact'} className={location.pathname === '/contact' ? 'active' : ''}>contact</Link>
                     </nav>
                 </div>
 

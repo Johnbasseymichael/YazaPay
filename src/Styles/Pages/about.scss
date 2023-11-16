@@ -1,0 +1,9 @@
+.about-page {
+    .about-section {
+        margin: 4rem 0;
+        .about {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
