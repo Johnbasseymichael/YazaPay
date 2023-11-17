@@ -118,3 +118,19 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+.overview {
+    .conclude {
+        padding: 0 .7rem;
+        h1 {
+            font-size: 2rem !important;
+        }
+        span {
+            font-weight: 500 !important;
+        }p {
+            font-size: .9rem !important;
+        }
+    }
+}
+}

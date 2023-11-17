@@ -1,7 +1,18 @@
 .navbar {
     height: 4.5rem;
     background: var(--bg-color);
-    box-shadow: 3px 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow);
+    transition: all .5s;
+    top: -5rem;
+
+    &.fixed {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        // transform: translateY(100%);
+        top: 0;
+        transition: 1s;
+    }
 
     .container {
         width: 80%;
@@ -11,7 +22,12 @@
         justify-content: space-between;
         margin: 0 auto;
 
-        .left-col {}
+        .left-col {
+            .menu-icon {
+                display: none;
+                cursor: pointer;
+            }
+        }
 
         .middle-col {
             height: 100%;
@@ -30,8 +46,58 @@
                     height: 100%;
                     display: flex;
                     align-items: center;
-                    color: var(--primary-color);
                     text-decoration: none;
+                    overflow: hidden;
+                    position: relative;
+                    color: var(--text-color);
+
+
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        opacity: 0;
+                        width: .3rem;
+                        border: 50%;
+                        top: 62%;
+                        height: .2rem;
+                        border-radius: 10rem;
+                        background: var(--primary-color);
+                        transform: translate(-50%, -50%);
+                        transition: .5s;
+                    }
+
+                    &:hover::before {
+                        opacity: 1;
+                        top: 99%;
+                        width: 100%;
+                    }
+
+                    &.active {
+                        color: var(--primary-color);
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            width: .3rem;
+                            border: 50%;
+                            height: .2rem;
+                            border-radius: 10rem;
+                            background: var(--primary-color);
+                            transform: translate(-50%, -50%);
+                            transition: .5s;
+                            opacity: 1;
+                            top: 99%;
+                            width: 100%;
+                        }
+                    }
+
                 }
             }
         }
@@ -48,9 +114,6 @@
             }
         }
 
-        .menu-icon {
-            display: none;
-        }
     }
 }
 
@@ -62,20 +125,77 @@
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
     .navbar {
+        background: var(--bg-color);
+        height: 3.5rem;
+        overflow: hidden;
+        transition: .5s;
+        top: 0;
+        right: 0;
+        left: 0;    top: -5rem;
+
+
+        &.show {
+            position: fixed;
+            height: 100vh;
+        }
+
         .container {
+            display: block;
 
-            .middle-col,
-            .right-col {
-                display: none;
+            .left-col {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+
+                .menu-icon {
+                    display: block;
+                    font-size: 2rem;
+                    transition: .5s;
+                    height: 2.5rem;
+                    border-radius: .7rem;
+                    width: 2.5rem;
+                    display: grid;
+                    place-content: center;
+
+                    &:hover {
+                        background: var(--primary-color);
+                        color: var(--light-text-color);
+                    }
+                }
             }
 
-            .menu-icon {
+            .middle-col {
                 display: block;
-                font-size: 2rem;
+                height: calc(100vh - 4.5rem - 9rem);
+                // overflow-x: hidden;
+                // overflow-y: auto;
+                // overflow: visible;
 
+
+                nav {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: .5rem 0;
+
+                    a {
+                        width: 50%;
+                        height: 3.5rem;
+                        text-align: center !important;
+                        display: grid;
+                    }
+                }
             }
+
+            .right-col {
+                display: grid;
+            }
+
+
         }
     }
 }

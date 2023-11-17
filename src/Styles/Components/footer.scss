@@ -1,0 +1,116 @@
+.footer {
+    background: pink;
+    min-height: 90vh;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    background: url('../../assets/bg-1.jpg') no-repeat center/cover;
+    flex-wrap: wrap;
+
+
+    .general {
+        max-width: 30rem;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            border-bottom: .1rem solid var(--placeholder-color);
+            padding: 1rem 0;
+            width: 90%;
+        }
+
+        ul {
+            margin-top: 2rem;
+
+            li {
+                list-style-type: none;
+                margin-bottom: 1rem;
+
+                a {
+                    color: var(--text-color);
+                    display: flex;
+                    align-items: center;
+                    gap: .6rem;
+                    width: fit-content;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .usefull-links {
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            display: block;
+            color: var(--text-color);
+            font-weight: 500;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .social-links {
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+            margin: .5rem 0;
+            padding: .5rem .7rem;
+            transition: .5s;
+            border-radius: .7rem;
+            color: var(--text-color);
+            font-weight: 500;
+
+            svg {
+                font-size: 1.4rem;
+            }
+
+            &:hover {
+                background: var(--soft-primary-color);
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+        section {
+            margin-top: 1.5rem;
+        }
+
+        .general {
+            p {
+                width: 100%;
+            }
+        }
+
+        .usefull-links {
+            text-align: center;
+        }
+
+        .social-links {
+            text-align: center;
+
+            a {
+                justify-content: center;
+            }
+
+        }
+    }
+}

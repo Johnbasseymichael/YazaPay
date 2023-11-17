@@ -4,8 +4,11 @@ import { MdOutlineQrCodeScanner } from "react-icons/md"
 import '../../Styles/Pages/FAQ/FAQ.scss'
 import Navbar from '../../Components/Navbar'
 import Questions from './Question'
+import Footer from '../../Components/Footer'
 
 function FAQ() {
+    document.title = "YazaPay - FAQ"
+
     return (
         <div className="FAQ">
             <Navbar />
@@ -26,7 +29,10 @@ function FAQ() {
                 <Questions />
                 <Questions />
                 <Questions />
+                <Questions />
             </div>
+
+            <Footer />
         </div>
     )
 }

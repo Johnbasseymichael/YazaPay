@@ -7,6 +7,7 @@ import Features from './Features'
 import About from './About'
 import Security from './Security'
 import Testimonials from './Testimonials'
+import Footer from '../../Components/Footer'
 
 // import 
 function Home() {
@@ -15,9 +16,10 @@ function Home() {
             <Navbar />
             <Hero />
             <Features />
-            <About/>
-            <Security/>
-            <Testimonials/>
+            <About />
+            <Security />
+            <Testimonials />
+            <Footer />
         </div>
     )
 }

@@ -1,0 +1,151 @@
+.contact {
+    .contact-container {
+        max-width: 72rem;
+        margin: 6rem auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 1rem;
+        padding: 0 1rem;
+
+        .contact-us {
+            width: 100%;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: .9rem;
+                margin-bottom: 2rem;
+            }
+
+            .other-info {
+                .info-block {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+
+                    &:nth-child(2) {
+                        svg {
+                            background: rgba(221, 255, 0, 0.383);
+                            color: rgb(132, 152, 0);
+                        }
+                    }
+
+                    &:last-child {
+                        svg {
+                            background: rgba(255, 0, 0, 0.385);
+                            color: red;
+                        }
+                    }
+
+                    svg {
+                        background: var(--soft-primary-color);
+                        color: var(--primary-color);
+                        padding: .7rem;
+                        min-width: 4rem;
+                        height: 4rem;
+                        border-radius: 1rem;
+                    }
+
+                    .info {
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .form {
+            width: 130%;
+
+            form {
+
+
+                .form-inner {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+                    gap: .7rem;
+
+                    .inp {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+
+                        label {
+                            font-weight: 500;
+                        }
+
+                        input {
+                            padding: .8rem 1.2rem;
+                            font-size: 1rem;
+                            border: .1rem solid var(--placeholder-color);
+                            border-radius: .5rem;
+                            background: none;
+
+                            &::placeholder {
+                                color: var(--placeholder-color);
+                            }
+                        }
+
+                        textarea {
+                            width: 200%;
+                            min-height: 12rem;
+                            border: .1rem solid var(--placeholder-color);
+                            font-family: 'poppins', sans-serif;
+                            font-size: 1rem;
+                            border-radius: .5rem;
+                            padding: .7rem;
+                            background: none;
+
+                            &::placeholder {
+                                color: var(--placeholder-color);
+                            }
+                        }
+                    }
+
+                }
+
+                button {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    background: var(--primary-color);
+                    color: var(--light-text-color);
+                    padding: .7rem 1.2rem;
+                    margin: 1rem 0;
+                    border-radius: .5rem;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .contact {
+        .contact-container {
+            flex-direction: column;
+            .contact-us {
+                h3 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: .84rem;
+                }
+            }
+
+            .form {
+                width: 100%;
+
+                form {
+                    max-width: 42rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
