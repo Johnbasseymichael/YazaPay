@@ -129,10 +129,12 @@
     .contact {
         .contact-container {
             flex-direction: column;
+
             .contact-us {
                 h3 {
                     font-size: 1rem;
                 }
+
                 p {
                     font-size: .84rem;
                 }
@@ -144,6 +146,10 @@
                 form {
                     max-width: 42rem;
                     margin: 0 auto;
+
+                    textarea {
+                        width: 100% !important;
+                    }
                 }
             }
         }

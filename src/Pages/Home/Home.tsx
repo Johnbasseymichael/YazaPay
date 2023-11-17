@@ -6,7 +6,6 @@ import Hero from './Hero'
 import Features from './Features'
 import About from './About'
 import Security from './Security'
-import Testimonials from './Testimonials'
 import Footer from '../../Components/Footer'
 
 // import 
@@ -18,7 +17,6 @@ function Home() {
             <Features />
             <About />
             <Security />
-            <Testimonials />
             <Footer />
         </div>
     )
