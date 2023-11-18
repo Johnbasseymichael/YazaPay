@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdOutlineQrCodeScanner } from "react-icons/md"
+import { MdEmail, MdCall, MdLocationOn } from "react-icons/md";
 
 
 import '../Styles/Pages/contact.scss'
@@ -22,7 +22,7 @@ function Contact() {
                     <div className="other-info">
 
                         <div className="info-block">
-                            <MdOutlineQrCodeScanner />
+                            <MdEmail />
                             <div className="info">
                                 <h3> Email us directly</h3>
                                 <p> support@example.com</p>
@@ -30,7 +30,7 @@ function Contact() {
                         </div>
 
                         <div className="info-block">
-                            <MdOutlineQrCodeScanner />
+                            <MdCall />
                             <div className="info">
                                 <h3> Call us on: +234234234234</h3>
                                 <p> Our office hours are Monday - Friday, 9 am-6 pm</p>
@@ -38,7 +38,7 @@ function Contact() {
                         </div>
 
                         <div className="info-block">
-                            <MdOutlineQrCodeScanner />
+                            <MdLocationOn />
                             <div className="info">
                                 <h3>  Our Location</h3>
                                 <p> 20-22 Wenlock Road, London, England, N1 7GU </p>

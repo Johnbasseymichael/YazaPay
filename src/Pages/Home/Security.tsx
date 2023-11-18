@@ -1,5 +1,12 @@
 import React from 'react'
-import { MdOutlineQrCodeScanner } from "react-icons/md"
+import { MdOutlineQrCodeScanner, MdPayment, MdMoreTime } from "react-icons/md"
+import { TbShieldLock } from "react-icons/tb";
+import { HiOutlineFingerPrint } from "react-icons/hi";
+import { GiPadlock } from "react-icons/gi";
+import { AiOutlineSolution } from "react-icons/ai";
+import { ImUserCheck } from "react-icons/im";
+import { BsBank2 } from "react-icons/bs";
+import { LuNewspaper } from "react-icons/lu";
 
 import '../../Styles/Pages/Home/security.scss'
 import map from '../../assets/map.webp'
@@ -10,7 +17,7 @@ function Security() {
             <div className="our-security">
 
                 <div className="head">
-                    <MdOutlineQrCodeScanner />
+                    <TbShieldLock />
                     <span>security</span>
                 </div>
 
@@ -20,35 +27,28 @@ function Security() {
                 <div className="cards">
 
                     <div className="card">
-                        <MdOutlineQrCodeScanner />
+                        <AiOutlineSolution />
                         <div>
-                            <h3>SMS or Email Verification</h3>
-                            <p>Both email and SMS make for more secure authentication, but there are pros and cons to everything.</p>
+                            <h3>KYC Solution</h3>
+                            <p>Protect sensitive information with our GDPR compliant tech - no server connection needed.</p>
                         </div>
                     </div>
                     <div className="card">
-                        <MdOutlineQrCodeScanner />
+                        <HiOutlineFingerPrint />
                         <div>
-                            <h3>SMS or Email Verification</h3>
-                            <p>Both email and SMS make for more secure authentication, but there are pros and cons to everything.</p>
+                            <h3>Two Factor Authentication</h3>
+                            <p>2FA, is an extra layer of protection used to ensure the security of online accounts beyond just a username and password.</p>
                         </div>
                     </div>
                     <div className="card">
-                        <MdOutlineQrCodeScanner />
+                        <GiPadlock />
                         <div>
-                            <h3>SMS or Email Verification</h3>
-                            <p>Both email and SMS make for more secure authentication, but there are pros and cons to everything.</p>
+                            <h3>End-to-End Encryption</h3>
+                            <p>End-to-end encryption is a system of communication where only the users communicating can read the messages.</p>
                         </div>
                     </div>
                     <div className="card">
-                        <MdOutlineQrCodeScanner />
-                        <div>
-                            <h3>SMS or Email Verification</h3>
-                            <p>Both email and SMS make for more secure authentication, but there are pros and cons to everything.</p>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <MdOutlineQrCodeScanner />
+                        <TbShieldLock />
                         <div>
                             <h3>SMS or Email Verification</h3>
                             <p>Both email and SMS make for more secure authentication, but there are pros and cons to everything.</p>
@@ -98,38 +98,38 @@ function Security() {
                 <div className="blocks">
 
                     <div className="block">
-                        <MdOutlineQrCodeScanner />
+                        <ImUserCheck />
                         <div>
                             <h3>Convenience</h3>
                             <p> your account balances, locate ATM machines, transact money transfers, and conveniently add funds through check deposits.</p>
                         </div>
                     </div>
                     <div className="block">
-                        <MdOutlineQrCodeScanner />
+                        <MdMoreTime />
                         <div>
-                            <h3>Convenience</h3>
-                            <p> your account balances, locate ATM machines, transact money transfers, and conveniently add funds through check deposits.</p>
+                            <h3>Timesaving</h3>
+                            <p> There is no need to physically go to a credit union branch to carry out the daily tasks mentioned earlier.</p>
                         </div>
                     </div>
                     <div className="block">
-                        <MdOutlineQrCodeScanner />
+                        <BsBank2 />
                         <div>
-                            <h3>Convenience</h3>
-                            <p> your account balances, locate ATM machines, transact money transfers, and conveniently add funds through check deposits.</p>
+                            <h3>Bank on the go</h3>
+                            <p> There is no need to physically go to a credit union branch to carry out the daily tasks mentioned earlier.</p>
                         </div>
                     </div>
                     <div className="block">
-                        <MdOutlineQrCodeScanner />
+                        <MdPayment />
                         <div>
-                            <h3>Convenience</h3>
-                            <p> your account balances, locate ATM machines, transact money transfers, and conveniently add funds through check deposits.</p>
+                            <h3>Payment</h3>
+                            <p>Make your monthly bill payments effortless by scheduling automatic payments with a hassle-free setup process.</p>
                         </div>
                     </div>
                     <div className="block">
-                        <MdOutlineQrCodeScanner />
+                        <LuNewspaper />
                         <div>
-                            <h3>Convenience</h3>
-                            <p> your account balances, locate ATM machines, transact money transfers, and conveniently add funds through check deposits.</p>
+                            <h3>e-Statement</h3>
+                            <p> Obtain electronic or hard copies of your financial statements to keep for tax or personal records. and more.</p>
                         </div>
                     </div>
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { MdOutlineMenu } from "react-icons/md";
+import { MdOutlineMenu, MdCancel } from "react-icons/md";
+
 
 import '../Styles/Components/navbar.scss'
 import JoinListModal from './JoinListModal';
@@ -67,7 +68,15 @@ function Navbar() {
                 </div>
             </div>
 
-            {showWaitList && <JoinListModal />}
+
+            <div className={`jwl ${showWaitList && 'show-modal'}`} >
+                <div className={`jwl-inner-modal ${showWaitList && 'scale-up'}`}>
+                    <MdCancel onClick={() => setShowWaitList(false)} />
+                    <JoinListModal />
+                </div>
+                
+            </div>
+
         </>
     )
 }

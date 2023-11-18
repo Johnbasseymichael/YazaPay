@@ -1,5 +1,9 @@
 import React from 'react'
 import { MdOutlineQrCodeScanner } from "react-icons/md"
+import { FaUserAlt } from "react-icons/fa";
+import { IoIosCard } from "react-icons/io";
+import { GiCheckMark } from "react-icons/gi";
+import { FaHandshake } from "react-icons/fa6";
 
 import '../../Styles/Pages/Home/about.scss'
 import scan from '../../assets/scan.webp'
@@ -20,31 +24,31 @@ function About() {
                 <div className="steps">
                     <div className="step">
                         <div className="icon">
-                            <MdOutlineQrCodeScanner />
+                            <FaUserAlt />
                         </div>
                         <span className="num">step 1</span>
                         <p>Create your Account</p>
                     </div>
                     <div className="step">
                         <div className="icon">
-                            <MdOutlineQrCodeScanner />
+                            <IoIosCard />
                         </div>
-                        <span className="num">step 1</span>
-                        <p>Create your Account</p>
+                        <span className="num">step 2</span>
+                        <p>Select Payment Method</p>
                     </div>
                     <div className="step">
                         <div className="icon">
                             <MdOutlineQrCodeScanner />
                         </div>
-                        <span className="num">step 1</span>
-                        <p>Create your Account</p>
+                        <span className="num">step 3</span>
+                        <p>Scan QRcode</p>
                     </div>
                     <div className="step">
                         <div className="icon">
-                            <MdOutlineQrCodeScanner />
+                        <GiCheckMark />
                         </div>
-                        <span className="num">step 1</span>
-                        <p>Create your Account</p>
+                        <span className="num">step 4</span>
+                        <p>Payment Done By Money Transferred</p>
                     </div>
 
 
@@ -66,7 +70,7 @@ function About() {
 
                     <div className="jobs">
                         <div className="job">
-                            <MdOutlineQrCodeScanner />
+                        <IoIosCard />
 
                             <div>
                                 <h3>Money Transfer</h3>
@@ -78,17 +82,17 @@ function About() {
                             <MdOutlineQrCodeScanner />
 
                             <div>
-                                <h3>Money Transfer</h3>
-                                <p>Money transfer refers to the process of sending money from one person or entity to another</p>
+                                <h3>QR Code Support</h3>
+                                <p>QR code support refers to the ability of a device, application, or system to recognize and read QR code</p>
                             </div>
 
                         </div>
                         <div className="job">
-                            <MdOutlineQrCodeScanner />
+                            <FaHandshake />
 
                             <div>
-                                <h3>Money Transfer</h3>
-                                <p>Money transfer refers to the process of sending money from one person or entity to another</p>
+                                <h3>Tried Dependability</h3>
+                                <p>Refers to the consistent reliability system that has been proven over time through extensive testing and use.</p>
                             </div>
 
                         </div>

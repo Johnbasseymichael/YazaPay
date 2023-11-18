@@ -1,7 +1,11 @@
 import React from 'react'
-import '../Styles/Components/footer.scss'
+import { FaFacebook } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { GrInstagram } from "react-icons/gr";
+import { BsLinkedin } from "react-icons/bs";
+import { MdEmail, MdCall } from "react-icons/md";
 
-import { MdOutlineQrCodeScanner } from "react-icons/md"
+import '../Styles/Components/footer.scss'
 import { Link } from 'react-router-dom'
 function Footer() {
     return (
@@ -13,13 +17,13 @@ function Footer() {
                 <ul>
                     <li>
                         <a href="tel:+234 000 000 000">
-                            <MdOutlineQrCodeScanner />
+                            <MdCall />
                             <span> +234 000 000 000</span>
                         </a>
                     </li>
                     <li>
                         <a href="mailto:example@gmail.com">
-                            <MdOutlineQrCodeScanner />
+                            <MdEmail />
                             <span> example@gmail.com</span>
                         </a>
                     </li>
@@ -36,10 +40,10 @@ function Footer() {
 
             <section className='social-links'>
                 <h3>Social Links</h3>
-                <Link to=''><MdOutlineQrCodeScanner /><span>Facebook</span></Link>
-                <Link to=''><MdOutlineQrCodeScanner /><span>Twitter</span></Link>
-                <Link to=''><MdOutlineQrCodeScanner /><span>Instagram</span></Link>
-                <Link to=''><MdOutlineQrCodeScanner /><span>Linkedin</span></Link>
+                <Link to=''><FaFacebook /><span>Facebook</span></Link>
+                <Link to=''><FaXTwitter /><span>Twitter</span></Link>
+                <Link to=''><GrInstagram /><span>Instagram</span></Link>
+                <Link to=''><BsLinkedin /><span>Linkedin</span></Link>
             </section>
         </div>
     )

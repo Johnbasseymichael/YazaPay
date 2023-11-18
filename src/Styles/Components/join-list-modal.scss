@@ -1,23 +1,14 @@
-.jwl {
-    background: rgba(0, 0, 0, 0.746);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    padding: 1rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: grid;
-    place-content: center;
-    z-index: 20;
-visibility: hidden;
+.jwll {
+
 
     .jwl-container {
-        background: var(--soft-bg-color);
-        padding: 1rem;
-        border-radius: .7rem;
-        max-width: 30rem;
-        margin: 0 auto;
+
+        // transform: scale(.2);
+
+        // &.scale-up {
+        //     transition: .5s;
+        //     transform: scale(1);
+        // }
 
         h3 {
             font-size: 1.5rem;
@@ -62,7 +53,8 @@ visibility: hidden;
                     }
                 }
 
-            // }
+
+            }
 
             button {
                 margin: 1rem 0;
@@ -71,8 +63,50 @@ visibility: hidden;
                 padding: .6rem 1.1rem;
                 font-size: 1rem;
                 border-radius: .4rem;
+
             }
 
-        }}
+
+        }
+
+    }
+
+    .success {
+        background: var(--soft-bg-color);
+        box-shadow: var(--shadow);
+        position: fixed;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 15rem;
+        text-align: center;
+        padding: 3rem 1rem;
+        z-index: 20;
+        border-radius: .7rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+
+        
+        &.show-msg {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &>svg {
+            color: rgb(106, 255, 0);
+            background: green;
+            font-size: 5rem;
+            padding: .5rem;
+            border-radius: 50%
+        }
+
+        h3 {
+            text-transform: capitalize;
+            margin-top: 1rem;
+        }
+
+
+
     }
 }

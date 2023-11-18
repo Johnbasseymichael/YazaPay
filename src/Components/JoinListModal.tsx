@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
-
+import { GiCheckMark } from "react-icons/gi";
 
 import '../Styles/Components/join-list-modal.scss'
 import axios from 'axios'
@@ -17,11 +17,14 @@ interface UserInfo {
 }
 
 function JoinListModal() {
+
     const [loading, setLoading] = useState(false)
+    const [successful, setSuccessful] = useState(false)
     const [isError, setIsError] = useState(false)
     const [errMsg, setErrMsg] = useState('')
 
-
+    // const apiUrl = import.meta.env.VITE_BASE_URL;
+    
     // FORM VALIDATION SCHEMA
     const schema = yup.object().shape({
         first_name: yup.string().max(30, 'Name too long').required('Please enter your first name '),
@@ -40,6 +43,11 @@ function JoinListModal() {
             setLoading(true)
             setIsError(false)
 
+            setTimeout(() => {
+                setSuccessful(true)
+                setLoading(false)
+            }, 1500);
+
             const res = await axios.post('https://jsonplaceholder.typicode.com/posts', {
                 data,
             })
@@ -55,9 +63,10 @@ function JoinListModal() {
 
     }
 
+
     return (
-        <div className="jwl show-modal">
-            <div className="jwl-container">
+        <div className={`jwll`} >
+            <div className={`jwl-container`}>
                 <h3>Join Wait List</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut quibusdam molestiae necessitatibus expedita reprehenderit? Velit provident hic eligendi magni architecto.</p>
 
@@ -95,9 +104,16 @@ function JoinListModal() {
                                 radius="1"
                             />
                         </div>
-                        : <button>Join Wait List</button>}
+                        : <button className='afa'>Join Wait List</button>}
                 </form>
+
             </div>
+
+            <div className={`success ${successful && 'show-msg'}`}>
+                <GiCheckMark />
+                <h3>successful</h3>
+            </div>
+
         </div>
     )
 }
