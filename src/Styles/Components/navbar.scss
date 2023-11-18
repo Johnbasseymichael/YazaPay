@@ -1,15 +1,21 @@
 .navbar {
     height: 4.5rem;
     background: var(--bg-color);
-    box-shadow: var(--shadow);
     transition: all .5s;
-    top: -5rem;
+    box-shadow: var(--shadow);
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+
+    &.hide {
+        top: -5rem;
+    }
 
     &.fixed {
         position: fixed;
         left: 0;
         width: 100%;
-        // transform: translateY(100%);
         top: 0;
         transition: 1s;
     }
@@ -131,11 +137,12 @@
         height: 3.5rem;
         overflow: hidden;
         transition: .5s;
+        padding: .3rem 0;
         top: 0;
         right: 0;
-        left: 0;    top: -5rem;
+        left: 0;
 
-
+        
         &.show {
             position: fixed;
             height: 100vh;
@@ -143,7 +150,7 @@
 
         .container {
             display: block;
-
+            
             .left-col {
                 display: flex;
                 align-items: center;

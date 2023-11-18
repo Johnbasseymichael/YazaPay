@@ -9,6 +9,8 @@
     overflow-x: hidden;
     display: grid;
     place-content: center;
+    z-index: 20;
+visibility: hidden;
 
     .jwl-container {
         background: var(--soft-bg-color);
@@ -26,11 +28,13 @@
         }
 
         form {
-margin-top: 1rem;
+            margin-top: 1rem;
+
             .jwl-inner-form {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
                 gap: .7rem;
+                margin-bottom: 1rem;
 
                 .inp {
                     display: flex;
@@ -39,6 +43,10 @@ margin-top: 1rem;
 
                     label {
                         font-weight: 500;
+                    }
+
+                    .err {
+                        color: red;
                     }
 
                     input {
@@ -54,7 +62,7 @@ margin-top: 1rem;
                     }
                 }
 
-            }
+            // }
 
             button {
                 margin: 1rem 0;
@@ -65,6 +73,6 @@ margin-top: 1rem;
                 border-radius: .4rem;
             }
 
-        }
+        }}
     }
 }

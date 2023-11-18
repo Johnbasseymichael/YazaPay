@@ -8,10 +8,22 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  text-transform: capitalize;
+  transition: .5s;
+}
+
+button:hover {
+  transform: scale(1.06);
 }
 
 input {
   outline: none;
   border: none;
   background: none;
+}
+
+.spinner {
+  margin: 1rem auto;
+  width: fit-content;
+  height: fit-content;
 }

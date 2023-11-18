@@ -10,6 +10,7 @@ function Navbar() {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false)
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [showWaitList, setShowWaitList] = useState(false)
 
     const handleScroll = () => {
         setScrollPosition(window.scrollY);
@@ -22,12 +23,20 @@ function Navbar() {
         };
     }, []);
 
-    const [showWaitList, setShowWaitList] = useState(false)
+
+    // PUSH USER INFO
+
+
+
+
+
+    // https://jsonplaceholder.typicode.com/posts
+
 
 
     return (
         <>
-            <div className={`navbar ${scrollPosition > 200 ? 'fixed' : ''} ${showMobileMenu && "show"}`}>
+            <div className={`navbar  ${scrollPosition > 100 ? 'hide' : ''} ${scrollPosition > 200 ? 'fixed' : ''} ${showMobileMenu && "show"}`}>
                 <div className="container">
 
                     <div className="left-col">

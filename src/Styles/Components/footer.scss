@@ -4,7 +4,7 @@
     display: flex;
     gap: 2rem;
     padding: 2rem 1rem;
-    background: url('../../assets/bg-1.jpg') no-repeat center/cover;
+    background: url('../../assets/bg2.webp') no-repeat center/cover;
     flex-wrap: wrap;
 
 
@@ -87,7 +87,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .footer {
         flex-direction: column;
         section {

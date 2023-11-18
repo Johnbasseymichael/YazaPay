@@ -67,6 +67,9 @@
         gap: 1rem;
         width: 84%;
         margin: 5rem auto;
+        .head {
+            margin: 1rem 0;
+        }
 
         img {
             width: 50%;
@@ -126,6 +129,10 @@
         flex-direction: column-reverse;
         width: 100% !important;
         padding: 0 1rem;
+
+        .head {
+            margin: 1rem auto !important;
+        }
 
         img {
             width: 100% !important;

@@ -6,12 +6,12 @@
   --soft-bg-color: hsl(0, 0%, 92%);
 
   --light-text-color: rgb(255, 255, 255);
-  --text-color: rgb(0, 0, 0);
+  --text-color: rgb(52, 52, 52);
 
   --primary-color: #0c56db;
   --soft-primary-color: #0c54db59;
 
-  --shadow: 3px 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow: 3px 10px 30px rgba(0, 0, 0, 0.15);
 
   --placeholder-color: gray;
 }
@@ -25,5 +25,4 @@
   margin: 0;
   text-decoration: none;
   outline: none;
-  /* font-size: 20px; */
 }

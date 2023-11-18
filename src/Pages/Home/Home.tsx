@@ -8,7 +8,6 @@ import About from './About'
 import Security from './Security'
 import Footer from '../../Components/Footer'
 
-// import 
 function Home() {
     return (
         <div className="home">
