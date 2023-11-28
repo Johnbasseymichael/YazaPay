@@ -147,10 +147,18 @@
                     max-width: 42rem;
                     margin: 0 auto;
 
-                    textarea {
-                        width: 100% !important;
-                    }
+
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 491px) {
+    .form {
+        form {
+            textarea {
+                width: 100% !important;
             }
         }
     }

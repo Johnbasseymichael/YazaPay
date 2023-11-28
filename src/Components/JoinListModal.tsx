@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { GiCheckMark } from "react-icons/gi";
+import { MdCancel } from "react-icons/md";
 
 import '../Styles/Components/join-list-modal.scss'
 import axios from 'axios'
@@ -11,20 +12,24 @@ import { TailSpin } from 'react-loader-spinner'
 
 
 interface UserInfo {
-    first_name: string,
-    last_name: string,
-    email: string
+    first_name: string;
+    last_name: string;
+    email: string;
 }
 
-function JoinListModal() {
+interface Props {
+    showWaitList: boolean;
+    setShowWaitList:  React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const JoinListModal: React.FC<Props> = ({ showWaitList, setShowWaitList }) => {
 
     const [loading, setLoading] = useState(false)
     const [successful, setSuccessful] = useState(false)
-    const [isError, setIsError] = useState(false)
     const [errMsg, setErrMsg] = useState('')
 
-    // const apiUrl = import.meta.env.VITE_BASE_URL;
-    
+    // const BASE_URL:string = import.meta.env.VITE_BASE_URL;
+
     // FORM VALIDATION SCHEMA
     const schema = yup.object().shape({
         first_name: yup.string().max(30, 'Name too long').required('Please enter your first name '),
@@ -39,38 +44,38 @@ function JoinListModal() {
     // SUBMIT USER INFO
     const onSubmit = async (data: UserInfo) => {
         try {
-
             setLoading(true)
-            setIsError(false)
+            setErrMsg('')
 
-            setTimeout(() => {
-                setSuccessful(true)
-                setLoading(false)
-            }, 1500);
-
-            const res = await axios.post('https://jsonplaceholder.typicode.com/posts', {
+            const res = await axios.post('http://example.com', {
                 data,
             })
-            console.log(res);
-
-            setLoading(true)
-
-        } catch (err) {
+            setSuccessful(true)
             setLoading(false)
-            setIsError(true)
+
+            setTimeout(() => {
+                setShowWaitList(false)
+            }, 2500);
+
+        } catch (err: any) {
+            setLoading(false)
+            setErrMsg(err.message)
             console.log(err);
+
         }
 
     }
 
 
     return (
-        <div className={`jwll`} >
-            <div className={`jwl-container`}>
+        <div className={`jwl ${showWaitList && 'show-modal'}`} >
+            <div className={`jwl-container ${showWaitList && 'scale-up'}`}>
                 <h3>Join Wait List</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut quibusdam molestiae necessitatibus expedita reprehenderit? Velit provident hic eligendi magni architecto.</p>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    {errMsg != '' && <p className='err-msg'>{errMsg}</p>}
+
                     <div className="jwl-inner-form">
 
                         <div className="inp">
@@ -106,6 +111,8 @@ function JoinListModal() {
                         </div>
                         : <button className='afa'>Join Wait List</button>}
                 </form>
+
+                <MdCancel onClick={() => setShowWaitList(false)} />
 
             </div>
 

@@ -1,14 +1,49 @@
-.jwll {
+.jwl {
+    background: rgba(0, 0, 0, 0.546);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    place-content: center;
+    z-index: 20;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
 
+    &.show-modal {
+        visibility: visible;
+        opacity: 1;
+    }
 
     .jwl-container {
+        background: var(--soft-bg-color);
+        padding: 1rem;
+        border-radius: .7rem;
+        max-width: 30rem;
+        margin: 0 auto;
+        transition: .5s;
+        position: relative;
+        transform: scale(0);
+        transition: .3s;
 
-        // transform: scale(.2);
+        &.scale-up {
+            transform: scale(1);
+            transition: 1s;
+        }
 
-        // &.scale-up {
-        //     transition: .5s;
-        //     transform: scale(1);
-        // }
+
+        &>svg {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.7rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
 
         h3 {
             font-size: 1.5rem;
@@ -20,6 +55,11 @@
 
         form {
             margin-top: 1rem;
+            .err-msg {
+                color: red;
+                text-align: center;
+                font-size: 1rem;
+            }
 
             .jwl-inner-form {
                 display: grid;
@@ -86,11 +126,15 @@
         opacity: 0;
         visibility: hidden;
         transition: .5s;
+        // transform: scale(.1);
 
-        
+
         &.show-msg {
             opacity: 1;
             visibility: visible;
+            // transform: scale(1);
+            // transform: translate(-50%, -50%);
+
         }
 
         &>svg {

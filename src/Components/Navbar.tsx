@@ -25,13 +25,7 @@ function Navbar() {
     }, []);
 
 
-    // PUSH USER INFO
 
-
-
-
-
-    // https://jsonplaceholder.typicode.com/posts
 
 
 
@@ -68,15 +62,7 @@ function Navbar() {
                 </div>
             </div>
 
-
-            <div className={`jwl ${showWaitList && 'show-modal'}`} >
-                <div className={`jwl-inner-modal ${showWaitList && 'scale-up'}`}>
-                    <MdCancel onClick={() => setShowWaitList(false)} />
-                    <JoinListModal />
-                </div>
-                
-            </div>
-
+            <JoinListModal setShowWaitList={setShowWaitList} showWaitList={showWaitList} />
         </>
     )
 }
