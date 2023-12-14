@@ -1,4 +1,3 @@
-import React from 'react'
 import { MdOutlineQrCodeScanner } from "react-icons/md"
 
 import '../../Styles/Pages/FAQ/FAQ.scss'

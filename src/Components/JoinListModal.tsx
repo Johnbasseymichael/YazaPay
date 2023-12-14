@@ -50,6 +50,8 @@ const JoinListModal: React.FC<Props> = ({ showWaitList, setShowWaitList }) => {
             const res = await axios.post('http://example.com', {
                 data,
             })
+
+            console.log(res)
             setSuccessful(true)
             setLoading(false)
 

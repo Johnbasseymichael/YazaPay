@@ -1,4 +1,3 @@
-import React from 'react'
 import { MdOutlineQrCodeScanner, MdPayment, MdMoreTime } from "react-icons/md"
 import { TbShieldLock } from "react-icons/tb";
 import { HiOutlineFingerPrint } from "react-icons/hi";

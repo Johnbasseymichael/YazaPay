@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { MdOutlineMenu, MdCancel } from "react-icons/md";
+import { MdOutlineMenu,  } from "react-icons/md";
 
 
 import '../Styles/Components/navbar.scss'

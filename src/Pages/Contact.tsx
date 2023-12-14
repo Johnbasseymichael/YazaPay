@@ -1,4 +1,3 @@
-import React from 'react'
 import { MdEmail, MdCall, MdLocationOn } from "react-icons/md";
 
 

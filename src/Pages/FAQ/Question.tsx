@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { IoMdAdd } from "react-icons/io";
 import { GrSubtract } from "react-icons/gr";
 function Question() {
@@ -15,6 +15,6 @@ function Question() {
       </div>
     </div>
   )
-}
+} 
 
 export default Question

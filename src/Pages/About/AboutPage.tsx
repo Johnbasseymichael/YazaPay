@@ -1,4 +1,3 @@
-import React from 'react'
 import About from '../Home/About'
 import Navbar from '../../Components/Navbar'
 import '../../Styles/Pages/about.scss'

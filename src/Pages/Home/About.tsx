@@ -1,4 +1,3 @@
-import React from 'react'
 import { MdOutlineQrCodeScanner } from "react-icons/md"
 import { FaUserAlt } from "react-icons/fa";
 import { IoIosCard } from "react-icons/io";

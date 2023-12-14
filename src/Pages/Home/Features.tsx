@@ -1,4 +1,3 @@
-import React from 'react'
 import { GiCheckMark } from "react-icons/gi";
 
 import '../../Styles/Pages/Home/features.scss'
